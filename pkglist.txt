@@ -1,0 +1,17 @@
+firefox
+ghostty
+hyprland
+hyprpolkitagent
+hyprshutdown
+lazygit
+man-db
+neovim
+openssh
+qt5-wayland
+qt6-wayland
+reflector
+ttf-jetbrains-mono-nerd
+uwsm
+xdg-desktop-portal-hyprland
+yazi
+zsh
