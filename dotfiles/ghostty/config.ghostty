@@ -1,0 +1,8 @@
+theme = Catppuccin Mocha
+
+font-family = "JetBrainsMono Nerd Font"
+
+font-feature = -calt, +zero
+
+keybind = ctrl+d=scroll_page_fractional:0.5
+keybind = ctrl+u=scroll_page_fractional:-0.5
