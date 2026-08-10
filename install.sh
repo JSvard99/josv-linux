@@ -4,13 +4,16 @@
 set -e
 
 # Update Arch and pre-installed packages
-pacman -Syu
+sudo pacman -Syu
 
 # Install additional packages
-pacman -S - < pkglist.txt
+sudo pacman -S - < pkglist.txt
 
 # Install yay
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+# Install noctalia with yay
+yay -S noctalia
 
 # Create symlinks
 mkdir -p ~/.config/ghostty && ln -sf ~/josv-linux/dotfiles/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
