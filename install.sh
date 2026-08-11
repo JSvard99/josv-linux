@@ -22,6 +22,7 @@ mkdir -p ~/.config/nvim && ln -sf ~/josv-linux/dotfiles/nvim/init.lua ~/.config/
 mkdir -p ~/.config/uwsm && ln -sf ~/josv-linux/dotfiles/uwsm/env ~/.config/uwsm/env
 mkdir -p ~/.config/yazi && ln -sf ~/josv-linux/dotfiles/yazi/keymap.toml ~/.config/yazi/keymap.toml
 ln -sf ~/josv-linux/dotfiles/yazi/yazi.toml ~/.config/yazi/yazi.toml
+ln -sf ~/josv-linux/dotfiles/yazi/theme.toml ~/.config/yazi/theme.toml
 
 ln -sf ~/josv-linux/dotfiles/zsh/zprofile ~/.zprofile
 ln -sf ~/josv-linux/dotfiles/zsh/zshrc ~/.zshrc
