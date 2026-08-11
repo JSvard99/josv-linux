@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Execute script from home
-cd ~
-
 # Exit script on failure
 set -e
+
+# Execute script from home
+cd ~
 
 # Update Arch and pre-installed packages
 sudo pacman -Syu
