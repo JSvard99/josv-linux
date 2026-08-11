@@ -3,14 +3,11 @@
 # Exit script on failure
 set -e
 
-# Execute script from home
-cd ~
-
 # Update Arch and pre-installed packages
 sudo pacman -Syu
 
 # Install additional packages
-sudo pacman -S - < pkglist.txt
+sudo pacman -S - < ~/josv-linux/pkglist.txt
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
