@@ -40,5 +40,12 @@ systemctl --user enable hyprpolkitagent.service
 # Change shell to zsh
 chsh -s /bin/zsh
 
+# Set up git config
+git config --global user.email "99josv20@gmail.com"
+git config --global user.name "JoSv"
+
+# Change git remote to use SSH
+git remote set-url origin git@github.com:JSvard99/josv-linux.git
+
 # Reboot
 reboot
