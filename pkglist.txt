@@ -8,6 +8,7 @@ lazygit
 man-db
 neovim
 openssh
+pacman-contrib
 qt5-wayland
 qt6-wayland
 reflector
