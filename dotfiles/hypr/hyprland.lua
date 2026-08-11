@@ -15,8 +15,8 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "uwsm app -- ghostty"
-local fileManager = "uwsm app -- ghostty -e yazi"
+local terminal    = "uwsm-app ghostty"
+local fileManager = "uwsm-app -T yazi"
 
 -------------------
 ---- AUTOSTART ----
