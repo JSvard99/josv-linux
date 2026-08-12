@@ -30,6 +30,8 @@ ln -sf ~/josv-linux/dotfiles/yazi/theme.toml ~/.config/yazi/theme.toml
 ln -sf ~/josv-linux/dotfiles/zsh/zprofile ~/.zprofile
 ln -sf ~/josv-linux/dotfiles/zsh/zshrc ~/.zshrc
 
+mkdir -p ~/.config/noctalia && ln -sf ~/josv-linux/dotfiles/noctalia/config.toml ~/.config/noctalia/config.toml
+
 # Start/enable systemd services
 sudo systemctl start reflector.timer
 sudo systemctl enable reflector.timer
