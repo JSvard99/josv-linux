@@ -1,7 +1,8 @@
 -------------------
 ---- MONITORS ----
 ------------------
-	-- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+-- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+
 hl.monitor({
     output   = "",
     mode     = "preferred",
@@ -82,8 +83,8 @@ hl.config({
     },
 
     decoration = {
-	rounding       = 20,
-	rounding_power = 2,
+	rounding       = 10,
+	rounding_power = 3,
 
 	-- Change transparency of focused and unfocused windows
 	active_opacity   = 1.0,
