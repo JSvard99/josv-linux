@@ -27,16 +27,6 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd("uwsm app -- noctalia")
 end)
 
-
--------------------------------
----- ENVIRONMENT VARIABLES ----
--------------------------------
-
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
