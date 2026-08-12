@@ -15,6 +15,9 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 # Install noctalia with yay
 yay -S noctalia
 
+# Install catppuccin cursor
+yay -S catppuccin-cursors-mocha
+
 # Create symlinks
 mkdir -p ~/.config/ghostty && ln -sf ~/josv-linux/dotfiles/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
 mkdir -p ~/.config/hypr && ln -sf ~/josv-linux/dotfiles/hypr/hyprland.lua ~/.config/hypr/hyprland.lua
