@@ -7,37 +7,38 @@ This is a personal Linux setup and configuration meant to automate installation 
 ## Installation
 1. Acquire a Linux Arch installation image and boot into it.
 
-2. In the tty, connect to WiFi with the command `iwctl station wlan0 connect *ROUTER_NAME*`
+2. In the tty, connect to WiFi with the command `iwctl station wlan0 connect ROUTER_NAME` where ROUTER_NAME is the name of your router.
 
-3. Run the command `archinstall` and apply the following choiches in the guided installer and reboot:
+3. Run the command `archinstall` and apply the following choices in the guided installer and reboot. 
 
-    Hostname                        : *Whatever*
-    Kernels                         : linux
-    Automatic Time Sync (NTP)       : Yes
-    Timezone                        : *Timezone*
-    Additional Packages             : git
-    Pacman                          : Color enabled
-    Mirrors and Repositories        : *Tegion*
-    Bootloader                      : Grub
-                                      Removable
-                                      Plymouth *Whatever*
-    Disk Configuration              : *Default layout for a clean wipe. Otherwise look into dual bootin*
+        Hostname                        : --WHATEVER--
+        Kernels                         : linux
+        Automatic Time Sync (NTP)       : Yes
+        Timezone                        : --TIMEZONE--
+        Additional Packages             : git
+        Pacman                          : Color enabled
+        Mirrors and Repositories        : --REGION--
+        Bootloader                      : Grub
+                                          Removable
+                                          Plymouth *Whatever*
+        Disk Configuration              : --Default layout for a clean wipe. Otherwise look into dual booting--
+        Swap                            : Zram enabled
+                                          Zram algorithm zstd
+        Authentication                  : Root password set
+                                          Configured --At least 1-- user(s)
+        Locales                         : Keyboard layout *Keyboard layout*
+                                          Locale language "en_US.UTF-8"
+                                          Locale encoding "UTF-8"
+                                          Console font "default8x16"
+        Profile                         : Minimal
+        Network                         : Use Network Manager (iwd backend)
+        Application                     : Bluetooth enabled
+                                          Audio server "pipewire"
+                                          Power management "power-profiles-daemon"
+                                          Firewall "firewalld"
+                                          Extra fonts "noto-fonts, noto-fonts-emoji"
 
-    Swap                            : Zram enabled
-                                      Zram algorithm zstd
-    Authentication                  : Root password set
-                                      Configured *At least 1* user(s)
-    Locales                         : Keyboard layout *Keyboard layout*
-                                      Locale language "en_US.UTF-8"
-                                      Locale encoding "UTF-8"
-                                      Console font "default8x16"
-    Profile                         : Minimal
-    Network                         : Use Network Manager (iwd backend)
-    Application                     : Bluetooth enabled
-                                      Audio server "pipewire"
-                                      Power management "power-profiles-daemon"
-                                      Firewall "firewalld"
-                                      Extra fonts "noto-fonts, noto-fonts-emoji"
+*NOTE: Text surrounded with -- are comments.*
 
 4. Login with your configured user, and connect to WiFi with the comman `iwctl station wlan0 connect *ROUTER_NAME*`.
 
