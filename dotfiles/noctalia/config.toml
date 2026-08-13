@@ -7,9 +7,10 @@ mode = "dark"
 source = "builtin"
 builtin = "Catppuccin"
 
+
 [bar.default]
 start = ["session", "spacer", "workspaces"]
-center = ["clock"]
+center = ["clock-date", "spacer", "home", "spacer", "clock"]
 end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "power_profile", "battery"]
 
 shadow = false
@@ -17,8 +18,23 @@ margin_ends = 0
 radius = 0
 padding = 20
 
-[control-center]
+[control_center]
+sidebar = "compact"
 hidden_tabs = ["media", "weather"]
 
+
 [widget.clock]
-format = "  {:%Y-%m-%d} |   {:%H:%M}     "
+format = "{:%H:%M}     "
+interactive = false
+
+[widget.clock-date]
+type = "clock"
+format = "{:%Y-%m-%d}"
+interactive = false
+
+[widget.home]
+type = "custom_button"
+glyph = "home"
+
+[widget.home.actions]
+left = "panel-toggle control-center"
