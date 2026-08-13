@@ -11,22 +11,22 @@ This is a personal Linux setup and configuration meant to automate installation 
 
 3. Run the command `archinstall` and apply the following choices in the guided installer and reboot. 
 
-        Hostname                        : --WHATEVER--
+        Hostname                        : **WHATEVER**
         Kernels                         : linux
         Automatic Time Sync (NTP)       : Yes
-        Timezone                        : --TIMEZONE--
+        Timezone                        : **TIMEZONE**
         Additional Packages             : git
         Pacman                          : Color enabled
-        Mirrors and Repositories        : --REGION--
+        Mirrors and Repositories        : **REGION**
         Bootloader                      : Grub
                                           Removable
-                                          Plymouth *Whatever*
-        Disk Configuration              : --Default layout for a clean wipe. Otherwise look into dual booting--
+                                          Plymouth **Whatever**
+        Disk Configuration              : **Default layout for a clean wipe. Otherwise read into dual booting from the resources below.*
         Swap                            : Zram enabled
                                           Zram algorithm zstd
         Authentication                  : Root password set
-                                          Configured --At least 1-- user(s)
-        Locales                         : Keyboard layout *Keyboard layout*
+                                          Configured **At least 1** user(s)
+        Locales                         : Keyboard layout **Keyboard layout**
                                           Locale language "en_US.UTF-8"
                                           Locale encoding "UTF-8"
                                           Console font "default8x16"
@@ -38,7 +38,7 @@ This is a personal Linux setup and configuration meant to automate installation 
                                           Firewall "firewalld"
                                           Extra fonts "noto-fonts, noto-fonts-emoji"
 
-*NOTE: Text surrounded with -- are comments.*
+*NOTE: Text surrounded with ** are comments.*
 
 4. Login with your configured user, and connect to WiFi with the comman `iwctl station wlan0 connect ROUTER_NAME`.
 
@@ -67,7 +67,10 @@ Example branch names could be feature/neovim-setup or refactor/hyprland-seperate
 ## Resources
 Some useful reading in the making this project.
 
-- [Arch Linux Wiki - General recommendations](https://wiki.archlinux.org/title/General_recommendations) 
+- [Arch Wiki - Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
+- [Arch Wiki - Dual boot with Windows](https://wiki.archlinux.org/title/Dual_boot_with_Windows)
+- [Arch Wiki - Laptop](https://wiki.archlinux.org/title/Laptop)
+- [Arch Wiki - General recommendations](https://wiki.archlinux.org/title/General_recommendations) 
 - [Hyprland Wiki - Installation](https://wiki.hypr.land/Getting-Started/Installation/)
 - [Hyprland Wiki - Master Tutorial](https://wiki.hypr.land/Getting-Started/Master-Tutorial/)
 - [Hyprland Wiki - Systemd start](https://wiki.hypr.land/Useful-Utilities/Systemd-start/)
