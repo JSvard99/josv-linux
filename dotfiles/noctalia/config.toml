@@ -6,3 +6,19 @@ font_family = "JetBrainsMono Nerd Font"
 mode = "dark"
 source = "builtin"
 builtin = "Catppuccin"
+
+[bar.default]
+start = ["session", "spacer", "workspaces"]
+center = ["clock"]
+end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "power_profile", "battery"]
+
+shadow = false
+margin_ends = 0
+radius = 0
+padding = 20
+
+[control-center]
+hidden_tabs = ["media", "weather"]
+
+[widget.clock]
+format = "{:%Y-%m-%d}  {:%H:%M}"
