@@ -21,4 +21,4 @@ padding = 20
 hidden_tabs = ["media", "weather"]
 
 [widget.clock]
-format = "{:%Y-%m-%d}  {:%H:%M}"
+format = "{:%Y-%m-%d} | {:%H:%M}     "
