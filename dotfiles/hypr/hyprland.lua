@@ -150,6 +150,10 @@ hl.gesture({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local ipc = "noctalia msg "
 
+-- Open noctalia menus
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
+
 -- Open common programs
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("uwsm-app ghostty"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("uwsm-app -T yazi"))
