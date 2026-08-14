@@ -29,12 +29,9 @@ hl.config({
 	border_size = 1,
 
 	col = {
-	    active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-	    inactive_border = "rgba(595959aa)",
+	    active_border   = "rgb(cba6f7)",
+	    inactive_border = "rgb(1e1e2e)",
 	},
-
-	-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-	allow_tearing = false,
 
 	layout = "dwindle",
     },
@@ -44,8 +41,8 @@ hl.config({
 	rounding_power = 3,
 
 	-- Change transparency of focused and unfocused windows
-	active_opacity   = 1.0,
-	inactive_opacity = 1.0,
+	active_opacity   = 1,
+	inactive_opacity = 1,
 
 	shadow = {
 	    enabled      = true,
@@ -112,7 +109,10 @@ hl.window_rule({
  hl.config({
     dwindle = {
 	preserve_split = true, -- You probably want this
-    },
+    	force_split = 2,
+	smart_resizing = false,
+
+	},
 })
 
 ---------------
@@ -129,20 +129,15 @@ hl.config({
 
 	follow_mouse = 2,
 
-	sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
-
 	touchpad = {
 	    natural_scroll = true,
 	},
     },
+    cursor = {
+	hide_on_key_press = true,
+	inactive_timeout = 3,
+	},
 })
-
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace"
-})
-
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
@@ -160,6 +155,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("uwsm-app -T yazi"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("uwsm-app firefox"))
 
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
 hl.bind(mainMod .. " + BACKSPACE", hl.dsp.window.close())
 hl.bind(mainMod .. " + TAB", hl.dsp.layout("togglesplit"))    -- dwindle only
 
@@ -216,11 +212,6 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
--- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-
--- Example window rules that are useful
-
 local suppressMaximizeRule = hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.
     name  = "suppress-maximize-events",
@@ -228,7 +219,6 @@ local suppressMaximizeRule = hl.window_rule({
 
     suppress_event = "maximize",
 })
--- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
     -- Fix some dragging issues with XWayland
@@ -244,14 +234,6 @@ hl.window_rule({
 
     no_focus = true,
 })
-
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
 
 -- Hyprland-run windowrule
 hl.window_rule({
