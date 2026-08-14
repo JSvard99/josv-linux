@@ -11,3 +11,12 @@ zstyle :compinstall filename '/home/josv/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# Prompt customization
+user=$'%F{blue}\ue0b6%f%K{blue}%F{black}%n%f%k%F{blue}\ue0b4%f' 
+dir=$'%F{green}\ue0b6%f%K{green}%F{black} \ue5ff %~ %f%k%F{green}\ue0b4%f'
+#cmd=$'%F{green}\ue0b6%f%K{green}%F{black}>%f%k%F{green}\ue0b4%f' 
+cmd=$'%F{red}> %f'
+newline=$'\n'
+
+PROMPT="%B${user} ${dir} ${newline}${cmd}%b"
