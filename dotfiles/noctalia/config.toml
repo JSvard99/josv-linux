@@ -10,7 +10,7 @@ community_palette = "Catppuccin Mocha Mauve-Lavender"
 [bar.default]
 start = ["session", "spacer", "workspaces"]
 center = ["clock-date", "spacer", "home", "spacer", "clock"]
-end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "power_profile", "battery"]
+end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "battery"]
 
 shadow = false
 margin_ends = 0
@@ -20,7 +20,6 @@ padding = 20
 [control_center]
 sidebar = "compact"
 hidden_tabs = ["media", "weather"]
-
 
 [widget.clock]
 format = "{:%H:%M}     "
@@ -33,7 +32,7 @@ interactive = false
 
 [widget.home]
 type = "custom_button"
-glyph = "home"
+glyph = "menu"
 
 [widget.home.actions]
 left = "panel-toggle control-center"
