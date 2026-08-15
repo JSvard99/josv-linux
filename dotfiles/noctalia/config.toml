@@ -1,6 +1,19 @@
 [shell]
 launch_apps_as_systemd_services = true
 font_family = "JetBrainsMono Nerd Font"
+setup_wizard_enabled = false
+polkit_agent = true
+
+[shell.panel]
+open_near_click_control_center = true
+open_near_click_session = true
+launcher_placement = "attached"
+clipboard_placement = "attached"
+polkit_placement = "attached"
+
+[shell.launcher]
+categories = false
+app_grid = true
 
 [theme]
 mode = "dark"
@@ -8,31 +21,59 @@ source = "community"
 community_palette = "Catppuccin Mocha Mauve-Lavender"
 
 [bar.default]
-start = ["session", "spacer", "workspaces"]
-center = ["clock-date", "spacer", "home", "spacer", "clock"]
+start = ["session", "spacer", "notifications", "spacer", "workspaces"]
+center = ["clock-date", "anchor", "clock"]
 end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "battery"]
-
 shadow = false
 margin_ends = 0
 radius = 0
 padding = 20
 
 [control_center]
-sidebar = "compact"
-hidden_tabs = ["media", "weather"]
+width = 500
+sidebar_section = "none"
 
 [widget.clock]
-format = "{:%H:%M}     "
+format = "{:%H:%M}"
 interactive = false
 
 [widget.clock-date]
 type = "clock"
 format = "{:%Y-%m-%d}"
-interactive = false
+interactive = true
 
-[widget.home]
-type = "custom_button"
-glyph = "menu"
+[widget.anchor]
+type = "spacer"
+anchor = true
+interactive = true
 
-[widget.home.actions]
-left = "panel-toggle control-center"
+[widget.session.actions]
+middle = "none"
+
+[widget.notifications.actions]
+middle = "none"
+
+[widget.workspaces.actions]
+middle = "none"
+
+[widget.clock-date.actions]
+middle = "none"
+
+[widget.volume.actions]
+middle = "none"
+
+[widget.brightness.actions]
+middle = "none"
+
+[widget.network.actions]
+middle = "none"
+right = "none"
+
+[widget.bluetooth.actions]
+middle = "none"
+
+[widget.battery.actions]
+middle = "none"
+
+[bar.default.dead_zone.actions]
+right = "none"
