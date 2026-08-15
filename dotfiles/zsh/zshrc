@@ -16,7 +16,16 @@ compinit
 user=$'%F{blue}\ue0b6%f%K{blue}%F{black}%n%f%k%F{blue}\ue0b4%f' 
 dir=$'%F{green}\ue0b6%f%K{green}%F{black} \ue5ff %~ %f%k%F{green}\ue0b4%f'
 #cmd=$'%F{green}\ue0b6%f%K{green}%F{black}>%f%k%F{green}\ue0b4%f' 
-cmd=$'%F{red}> %f'
+cmd=$'%F{red}\uf105 %f'
 newline=$'\n'
 
+precmd() {
+    precmd() {
+        echo
+    }
+}
+
 PROMPT="%B${user} ${dir} ${newline}${cmd}%b"
+
+# Source zsh syntax highlighting and autocomplete
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
