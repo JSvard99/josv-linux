@@ -42,7 +42,7 @@ hl.config({
 
 	-- Change transparency of focused and unfocused windows
 	active_opacity   = 1,
-	inactive_opacity = 1,
+	inactive_opacity = 0.9,
 
 	shadow = {
 	    enabled      = true,
@@ -111,7 +111,6 @@ hl.window_rule({
 	preserve_split = true, -- You probably want this
     	force_split = 2,
 	smart_resizing = false,
-
 	},
 })
 
@@ -145,10 +144,6 @@ hl.config({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local ipc = "noctalia msg "
 
--- Open noctalia menus
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
-
 -- Open common programs
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("uwsm-app ghostty"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("uwsm-app -T yazi"))
@@ -165,17 +160,35 @@ hl.bind(mainMod .. " + L",  hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K",  hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
 
+-- Move focus with mainMod + arrow keys
+hl.bind(mainMod .. " + LEFT",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + RIGHT",  hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + UP",  hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + DOWN",  hl.dsp.focus({ direction = "down" }))
+
 -- Move windows with mainMod + SHIFT + HJKL
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
+-- Move windows with mainMod + SHIFT + arrow keys
+hl.bind(mainMod .. " + SHIFT + LEFT", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + RIGHT", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + UP", hl.dsp.window.move({ direction = "up" })) 
+hl.bind(mainMod .. " + SHIFT + DOWN", hl.dsp.window.move({ direction = "down" }))
+
 -- Resize windows with mainMod + CTRL + HJKL
 hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -25, y =   0, relative = true }), { repeating = true })
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x =  25, y =   0, relative = true }), { repeating = true })
 hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x =   0, y = -25, relative = true }), { repeating = true })
 hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x =   0, y =  25, relative = true }), { repeating = true })
+
+-- Resize windows with mainMod + CTRL + arrow keys
+hl.bind(mainMod .. " + CTRL + LEFT", hl.dsp.window.resize({ x = -25, y =   0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + RIGHT", hl.dsp.window.resize({ x =  25, y =   0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + UP", hl.dsp.window.resize({ x =   0, y = -25, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + DOWN", hl.dsp.window.resize({ x =   0, y =  25, relative = true }), { repeating = true })
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
@@ -190,9 +203,7 @@ for i = 1, 10 do
 end
 
 -- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
-
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" })) hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
