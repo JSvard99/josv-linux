@@ -17,3 +17,4 @@ xdg-desktop-portal-hyprland
 yazi
 zsh
 keyd
+zsh-syntax-highlighting
