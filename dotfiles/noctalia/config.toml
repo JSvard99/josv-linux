@@ -21,31 +21,37 @@ source = "community"
 community_palette = "Catppuccin Mocha Mauve-Lavender"
 
 [bar.default]
-start = ["session", "spacer", "notifications", "spacer", "workspaces"]
-center = ["clock-date", "anchor", "clock"]
+start = ["session", "spacer", "notifications", "spacer", "clock-date", "spacer", "clock"]
+center = ["workspaces"]
 end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "battery"]
 shadow = false
 margin_ends = 0
 radius = 0
 padding = 20
+thickness = 30
 
 [control_center]
 width = 500
 sidebar_section = "none"
 
+[widget.workspaces]
+#anchor = true
+
 [widget.clock]
 format = "{:%H:%M}"
 interactive = false
+#anchor = true
 
 [widget.clock-date]
 type = "clock"
 format = "{:%Y-%m-%d}"
 interactive = true
+#anchor = true
 
-[widget.anchor]
-type = "spacer"
-anchor = true
-interactive = true
+#[widget.anchor]
+#type = "spacer"
+#anchor = true
+#interactive = true
 
 [widget.session.actions]
 middle = "none"
