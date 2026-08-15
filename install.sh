@@ -45,7 +45,6 @@ sudo systemctl enable fstrim.timer
 sudo systemctl start paccache.timer
 sudo systemctl enable paccache.timer
 
-systemctl --user enable hyprpolkitagent.service
 
 # Change shell to zsh
 chsh -s /bin/zsh
