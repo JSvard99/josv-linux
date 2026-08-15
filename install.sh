@@ -34,6 +34,8 @@ mkdir -p ~/.config/noctalia && ln -sf ~/josv-linux/dotfiles/noctalia/config.toml
 
 mkdir -p ~/.config/fontconfig && ln -sf ~/josv-linux/dotfiles/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf
 
+sudo mkdir -p /etc/keyd && sudo ln -sf ~/josv-linux/dotfiles/keyd/default.conf /etc/keyd/default.conf
+
 # Start/enable systemd services
 sudo systemctl start reflector.timer
 sudo systemctl enable reflector.timer
