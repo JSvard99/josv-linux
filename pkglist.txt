@@ -2,7 +2,6 @@ base-devel
 firefox
 ghostty
 hyprland
-hyprpolkitagent
 lazygit
 man-db
 neovim
