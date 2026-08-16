@@ -3,8 +3,6 @@
 # Exit script on failure
 set -e
 
-# Update Arch and pre-installed packages
-sudo pacman -Syu
 
 # Install additional packages
 sudo pacman -S - < ~/josv-linux/pkglist.txt
@@ -17,6 +15,7 @@ yay -S noctalia
 
 # Install catppuccin cursor
 yay -S catppuccin-cursors-mocha
+
 
 # Create symlinks
 mkdir -p ~/.config/ghostty && ln -sf ~/josv-linux/dotfiles/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
@@ -36,6 +35,7 @@ mkdir -p ~/.config/fontconfig && ln -sf ~/josv-linux/dotfiles/fontconfig/fonts.c
 
 sudo mkdir -p /etc/keyd && sudo ln -sf ~/josv-linux/dotfiles/keyd/default.conf /etc/keyd/default.conf
 
+
 # Start/enable systemd services
 sudo systemctl start reflector.timer
 sudo systemctl enable reflector.timer
@@ -49,13 +49,14 @@ sudo systemctl enable paccache.timer
 # Change shell to zsh
 chsh -s /bin/zsh
 
+
 # Set up git config
 git config --global user.email "99josv20@gmail.com"
 git config --global user.name "JoSv"
 
-# Change git remote to use SSH
-cd ~/josv-linux
-git remote set-url origin git@github.com:JSvard99/josv-linux.git
+# Login to GitHub and authorize
+gh auth login -c -p https -h github.com -w
+
 
 # Reboot
 reboot

@@ -18,3 +18,4 @@ yazi
 zsh
 keyd
 zsh-syntax-highlighting
+github-cli
