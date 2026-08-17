@@ -84,7 +84,7 @@ keymap = [
 	{ on = "S",         run = "search --via=rg",             desc = "Search files by content via ripgrep" },
 	{ on = "<C-s>",     run = "escape --search",             desc = "Cancel the ongoing search" },
 	{ on = "z",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
-	{ on = "Z",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
+#	{ on = "Z",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Linemode: size" },
@@ -125,11 +125,12 @@ keymap = [
 	{ on = [ ",", "r" ], run = "sort random --reverse=no",                       desc = "Sort randomly" },
 
 	# Goto
-	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
-	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
-	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
-	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
-	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
+	{ on = [ "g", "h" ],       run = "cd ~",             	       desc = "Go home" },
+	{ on = [ "g", "c" ],       run = "cd ~/.config",     	       desc = "Go ~/.config" },
+	{ on = [ "g", "d" ],       run = "cd ~/josv-linux/dotfiles",   desc = "Go ~/josv-linux/dotfiles" },
+	{ on = [ "g", "j" ],       run = "cd ~/josv-linux",   	       desc = "Go ~/josv-linux" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive", 	       desc = "Jump interactively" },
+	{ on = [ "g", "f" ],       run = "follow",           	       desc = "Follow hovered symlink" },
 
 	# Tabs
 	{ on = [ "t", "t" ], run = "tab_create --current",     desc = "Create a new tab in CWD" },
