@@ -19,3 +19,6 @@ zsh
 keyd
 zsh-syntax-highlighting
 github-cli
+fd
+ripgrep
+fzf
