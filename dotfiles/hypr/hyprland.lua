@@ -170,8 +170,7 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Set window to pseudo/floating 
-hl.bind(mainMod .. " + W", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.float())
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("~/josv-linux/dotfiles/hypr/window-state-swap.sh"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
