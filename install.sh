@@ -37,6 +37,7 @@ mkdir -p ~/.config/fontconfig && ln -sf ~/josv-linux/dotfiles/fontconfig/fonts.c
 
 sudo mkdir -p /etc/keyd && sudo ln -sf ~/josv-linux/dotfiles/keyd/default.conf /etc/keyd/default.conf
 
+mkdir -p ~/.config/lazygit && ln -sf ~/josv-linux/dotfiles/lazygit/config.yml ~/.config/lazygit/config.yml
 
 # Start/enable systemd services
 sudo systemctl start reflector.timer

@@ -7,8 +7,6 @@ For example with "echo y y n"
 
 - Look up yazi docs and install tool/remove unneeded keybinds
 
-- Fix theme for lazygit
-
 - Configuire Neovim
 
 - Add desktop widgets
