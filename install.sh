@@ -8,7 +8,9 @@ set -e
 sudo pacman -S - < ~/josv-linux/pkglist.txt
 
 # Install yay
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 # Install noctalia with yay
 yay -S noctalia
