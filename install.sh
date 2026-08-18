@@ -3,9 +3,8 @@
 # Exit script on failure
 set -e
 
-
 # Install additional packages
-sudo pacman -S --noconfirm - < ~/josv-linux/pkglist.txt
+sudo pacman -S --noconfirm - <~/josv-linux/pkglist.txt
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git
@@ -17,7 +16,6 @@ yay -S noctalia
 
 # Install catppuccin cursor
 yay -S catppuccin-cursors-mocha
-
 
 # Create symlinks
 mkdir -p ~/.config/ghostty
@@ -52,7 +50,6 @@ sudo ln -sf ~/josv-linux/dotfiles/keyd/default.conf /etc/keyd/default.conf
 mkdir -p ~/.config/lazygit
 ln -sf ~/josv-linux/dotfiles/lazygit/config.yml ~/.config/lazygit/config.yml
 
-
 # Start/enable systemd services
 sudo systemctl start reflector.timer
 sudo systemctl enable reflector.timer
@@ -62,10 +59,8 @@ sudo systemctl enable fstrim.timer
 sudo systemctl start paccache.timer
 sudo systemctl enable paccache.timer
 
-
 # Change shell to zsh
 chsh -s /bin/zsh
-
 
 # Set up git config
 git config --global user.email "99josv20@gmail.com"
@@ -73,7 +68,6 @@ git config --global user.name "JoSv"
 
 # Login to GitHub and authorize
 gh auth login -c -p https -h github.com -w
-
 
 # Reboot
 #reboot
