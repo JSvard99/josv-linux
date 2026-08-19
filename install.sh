@@ -53,6 +53,8 @@ sudo systemctl enable fstrim.timer
 sudo systemctl start paccache.timer
 sudo systemctl enable paccache.timer
 
+sudo systemctl enable --now keyd
+
 # Change shell to zsh
 chsh -s /bin/zsh
 
