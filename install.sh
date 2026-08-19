@@ -63,7 +63,7 @@ git config --global user.email "99josv20@gmail.com"
 git config --global user.name "JoSv"
 
 # Login to GitHub and authorize
-gh auth login -c -p https -h github.com -w
+gh auth login -p https
 
 # Reboot
 #reboot
