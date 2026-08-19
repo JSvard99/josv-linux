@@ -22,3 +22,4 @@ github-cli
 fd
 ripgrep
 fzf
+noctalia

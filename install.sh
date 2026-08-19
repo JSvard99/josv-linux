@@ -11,9 +11,6 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-# Install noctalia with yay
-yay -S noctalia
-
 # Install catppuccin cursor
 yay -S catppuccin-cursors-mocha
 
