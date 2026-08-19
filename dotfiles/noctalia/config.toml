@@ -15,6 +15,37 @@ polkit_placement = "attached"
 categories = false
 app_grid = true
 
+[[shell.session.actions]]
+action = "lock"
+shortcut = ""
+
+[[shell.session.actions]]
+action = "reboot"
+shortcut = ""
+
+[[shell.session.actions]]
+action = "shutdown"
+shortcut = ""
+variant = "destructive"
+
+[idle]
+behavior_order = ["dim-screen", "screen-off", "suspend"]
+pre_action_fade_seconds = 0
+
+[idle.behavior.dim-screen]
+timeout = 60
+action = "command"
+command = "noctalia msg osd-disable && noctalia msg brightness-down all 50% && noctalia msg osd-enable"
+resume_command = "noctalia msg osd-disable && noctalia msg brightness-up all 50% && noctalia msg osd-enable"
+
+[idle.behavior.screen-off]
+timeout = 90
+action = "screen_off"
+
+[idle.behavior.suspend]
+timeout = 100
+action = "lock"
+
 [theme]
 mode = "dark"
 source = "community"
