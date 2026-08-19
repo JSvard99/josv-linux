@@ -22,12 +22,6 @@ dir=$'%F{green}\ue0b6%f%K{green}%F{black} \ue5ff %~ %f%k%F{green}\ue0b4%f'
 cmd=$'%F{red}\uf105 %f'
 newline=$'\n'
 
-precmd() {
-    precmd() {
-        echo
-    }
-}
-
 PROMPT="%B${user} ${dir} ${newline}${cmd}%b"
 
 # Source zsh syntax highlighting and autocomplete
