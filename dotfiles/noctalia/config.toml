@@ -16,17 +16,17 @@ categories = false
 app_grid = true
 
 [[shell.session.actions]]
-action = "lock"
+action = "shutdown"
 shortcut = ""
+variant = "destructive"
 
 [[shell.session.actions]]
 action = "reboot"
 shortcut = ""
 
 [[shell.session.actions]]
-action = "shutdown"
+action = "lock"
 shortcut = ""
-variant = "destructive"
 
 [idle]
 behavior_order = ["dim-screen", "screen-off", "suspend"]
