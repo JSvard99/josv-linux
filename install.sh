@@ -66,4 +66,4 @@ git config --global user.name "JoSv"
 gh auth login -h github.com -p https -w
 
 # Reboot
-#reboot
+reboot
