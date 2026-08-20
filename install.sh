@@ -9,7 +9,7 @@ sudo pacman -S --noconfirm - <~/josv-linux/pkglist.txt
 # Install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+yes "" | makepkg -si
 
 # Install catppuccin cursor
 yes "" | yay -S catppuccin-cursors-mocha
