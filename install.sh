@@ -12,7 +12,7 @@ cd yay
 makepkg -si
 
 # Install catppuccin cursor
-yay -S catppuccin-cursors-mocha
+yes "" | yay -S catppuccin-cursors-mocha
 
 # Create symlinks
 mkdir -p ~/.config/ghostty
@@ -53,7 +53,7 @@ sudo systemctl enable fstrim.timer
 sudo systemctl start paccache.timer
 sudo systemctl enable paccache.timer
 
-sudo systemctl enable --now keyd
+sudo systemctl enable keyd
 
 # Change shell to zsh
 chsh -s /bin/zsh
@@ -63,7 +63,7 @@ git config --global user.email "99josv20@gmail.com"
 git config --global user.name "JoSv"
 
 # Login to GitHub and authorize
-gh auth login -p https
+gh auth login -h github.com -p https -w
 
 # Reboot
 #reboot
