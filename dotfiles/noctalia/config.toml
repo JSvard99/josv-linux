@@ -55,13 +55,18 @@ community_palette = "Catppuccin Mocha Mauve-Lavender"
 path = "/home/josv/josv-linux/wallpaper.png"
 
 [bar.default]
+smart_auto_hide = true
+reserve_space = false
+#show_on_workspace_switch = false
 start = ["session", "spacer", "notifications", "spacer", "clock-date", "spacer", "clock"]
 center = ["workspaces"]
 end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "battery"]
 shadow = false
-margin_ends = 0
+margin_ends = 125	
 radius = 0
-padding = 20
+radius_bottom_left = 10
+radius_bottom_right = 10
+padding = 25
 thickness = 30
 
 [control_center]
