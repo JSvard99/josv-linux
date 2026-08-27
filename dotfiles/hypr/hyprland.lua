@@ -62,6 +62,12 @@ hl.config({
 	animations = {
 		enabled = true,
 	},
+
+	misc = {
+		disable_hyprland_logo = true,
+		background_color = "#181825",
+		disable_splash_rendering = true,
+	},
 })
 
 -- "Smart gaps" / "No gaps when only"

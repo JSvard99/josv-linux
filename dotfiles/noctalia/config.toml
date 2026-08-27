@@ -51,6 +51,9 @@ mode = "dark"
 source = "community"
 community_palette = "Catppuccin Mocha Mauve-Lavender"
 
+[wallpaper.default]
+path = "/home/josv/josv-linux/wallpaper.png"
+
 [bar.default]
 start = ["session", "spacer", "notifications", "spacer", "clock-date", "spacer", "clock"]
 center = ["workspaces"]
