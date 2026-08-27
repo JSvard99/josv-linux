@@ -44,6 +44,12 @@ ln -sf ~/josv-linux/dotfiles/zsh/zshrc ~/.zshrc
 
 sudo ln -sf ${DOTFILES}keyd /etc/keyd
 
+sudo ln -sf ${DOTFILES}grub/grub /etc/default/grub 
+
+
+# Generate GRUB config
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 
 # Start/enable systemd services
 sudo systemctl start reflector.timer
