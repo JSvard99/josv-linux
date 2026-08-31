@@ -18,24 +18,28 @@ yes "" | makepkg -si
 # Install catppuccin cursor
 yes "" | yay -S catppuccin-cursors-mocha
 
+# Install xdg term file chooser
+yes "" | yay -S xdg-desktop-portal-termfilechooser-hunkyburrito-git
 
 # Create symlinks
 DOTFILES="${HOME}/josv-linux/dotfiles/"
 CONFIG="${HOME}/.config/"
 
-ln -sf ${DOTFILES}ghostty    ${CONFIG}ghostty
+ln -sf ${DOTFILES}ghostty    			     ${CONFIG}ghostty
 
-ln -sf ${DOTFILES}hypr       ${CONFIG}hypr
+ln -sf ${DOTFILES}hypr       			     ${CONFIG}hypr
 
-ln -sf ${DOTFILES}uwsm       ${CONFIG}uwsm
+ln -sf ${DOTFILES}uwsm       			     ${CONFIG}uwsm
 
-ln -sf ${DOTFILES}yazi       ${CONFIG}yazi
+ln -sf ${DOTFILES}yazi       			     ${CONFIG}yazi
 
-ln -sf ${DOTFILES}noctalia   ${CONFIG}noctalia
+ln -sf ${DOTFILES}noctalia   			     ${CONFIG}noctalia
 
-ln -sf ${DOTFILES}fontconfig ${CONFIG}fontconfig
+ln -sf ${DOTFILES}fontconfig 			     ${CONFIG}fontconfig
 
-ln -sf ${DOTFILES}lazygit    ${CONFIG}lazygit
+ln -sf ${DOTFILES}lazygit    			     ${CONFIG}lazygit
+
+ln -sf ${DOTFILES}xdg-desktop-portal-termfilechooser ${CONFIG}xdg-desktop-portal-termfilechooser
 
 
 ln -sf ~/josv-linux/dotfiles/zsh/zprofile ~/.zprofile
