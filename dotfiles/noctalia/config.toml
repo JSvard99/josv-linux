@@ -33,17 +33,17 @@ behavior_order = ["dim-screen", "screen-off", "suspend"]
 pre_action_fade_seconds = 0
 
 [idle.behavior.dim-screen]
-timeout = 60
+timeout = 90
 action = "command"
-command = "noctalia msg osd-disable && noctalia msg brightness-down all 50% && noctalia msg osd-enable"
-resume_command = "noctalia msg osd-disable && noctalia msg brightness-up all 50% && noctalia msg osd-enable"
+command = "noctalia msg osd-disable && noctalia msg brightness-down all 70% && noctalia msg osd-enable"
+resume_command = "noctalia msg osd-disable && noctalia msg brightness-up all 70% && noctalia msg osd-enable"
 
 [idle.behavior.screen-off]
-timeout = 90
+timeout = 120
 action = "screen_off"
 
 [idle.behavior.suspend]
-timeout = 100
+timeout = 130
 action = "lock"
 
 [theme]
@@ -57,17 +57,14 @@ path = "/home/josv/josv-linux/wallpaper.png"
 [bar.default]
 smart_auto_hide = true
 reserve_space = false
-#show_on_workspace_switch = false
 start = ["session", "spacer", "notifications", "spacer", "clock-date", "spacer", "clock"]
 center = ["workspaces"]
 end = ["volume", "brightness", "spacer", "network", "bluetooth", "spacer", "battery"]
 shadow = false
-margin_ends = 125	
-radius = 0
-radius_bottom_left = 10
-radius_bottom_right = 10
-padding = 25
-thickness = 30
+margin_ends = 300	
+radius = 10
+padding = 20
+thickness = 35
 
 [control_center]
 width = 600
