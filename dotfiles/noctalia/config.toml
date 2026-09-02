@@ -29,7 +29,7 @@ action = "lock"
 shortcut = ""
 
 [idle]
-behavior_order = ["dim-screen", "screen-off", "suspend"]
+behavior_order = ["dim-screen", "suspend"]
 pre_action_fade_seconds = 0
 
 [idle.behavior.dim-screen]
@@ -38,13 +38,9 @@ action = "command"
 command = "noctalia msg osd-disable && noctalia msg brightness-down all 70% && noctalia msg osd-enable"
 resume_command = "noctalia msg osd-disable && noctalia msg brightness-up all 70% && noctalia msg osd-enable"
 
-[idle.behavior.screen-off]
-timeout = 120
-action = "screen_off"
-
 [idle.behavior.suspend]
-timeout = 130
-action = "lock"
+timeout = 120
+action = "lock_and_suspend"
 
 [theme]
 mode = "dark"
