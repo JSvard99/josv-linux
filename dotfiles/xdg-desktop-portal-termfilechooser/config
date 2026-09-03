@@ -1,9 +1,0 @@
-### $XDG_CONFIG_HOME/xdg-desktop-portal-termfilechooser/config ###
-
-[filechooser]
-cmd=$HOME/josv-linux/dotfiles/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
-default_dir=$HOME
-env=TERMCMD=uwsm-app -T --
-env=VARIABLE2=VALUE2
-open_mode = suggested
-save_mode = last
