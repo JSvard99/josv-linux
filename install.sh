@@ -41,7 +41,7 @@ ln -sf ~/josv-linux/dotfiles/zsh/zprofile ~/.zprofile
 ln -sf ~/josv-linux/dotfiles/zsh/zshrc ~/.zshrc
 
 
-sudo ln -sf ${DOTFILES}keyd /etc/keyd
+sudo ln -sf ${DOTFILES}keyd/default.conf /etc/keyd/default.conf
 
 sudo ln -sf ${DOTFILES}grub/grub /etc/default/grub 
 
