@@ -40,8 +40,7 @@ This is a personal Linux setup and configuration meant to automate installation 
 
     Timezone -> --Select your timezone--
 
-4. Select `chroot into installation for post-installation configurations`
-4. Login with your configured user, and connect to WiFi with the comman `iwctl station wlan0 connect ROUTER_NAME`.
+4. Reboot and login with your configured user, and connect to WiFi with the comman `iwctl station wlan0 connect ROUTER_NAME`.
 
 5. Run the command `git clone https://github.com/JSvard99/josv-linux.git`
 
