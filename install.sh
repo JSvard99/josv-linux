@@ -18,6 +18,9 @@ yes "" | makepkg -si
 # Install catppuccin cursor
 yes "" | yay -S catppuccin-cursors-mocha
 
+# Install jetbrains toolbox
+yes "" | yay -S jetbrains-toolbox
+
 # Create symlinks
 DOTFILES="${HOME}/josv-linux/dotfiles/"
 CONFIG="${HOME}/.config/"
