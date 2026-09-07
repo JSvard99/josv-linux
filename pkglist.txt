@@ -24,3 +24,5 @@ ripgrep
 fzf
 noctalia
 os-prober
+
+dotnet-sdk
