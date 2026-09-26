@@ -27,19 +27,18 @@ yes "" | yay -S adw-gtk-theme
 DOTFILES="${HOME}/josv-linux/dotfiles/"
 CONFIG="${HOME}/.config/"
 
-ln -sf ${DOTFILES}ghostty    			     ${CONFIG}ghostty
+rm -rf ${CONFIG}umbriel
+ln -sf ${DOTFILES}umbriel	${CONFIG}umbriel
 
-ln -sf ${DOTFILES}hypr       			     ${CONFIG}hypr
+ln -sf ${DOTFILES}ghostty	${CONFIG}ghostty
 
-ln -sf ${DOTFILES}uwsm       			     ${CONFIG}uwsm
+ln -sf ${DOTFILES}yazi		${CONFIG}yazi
 
-ln -sf ${DOTFILES}yazi       			     ${CONFIG}yazi
+ln -sf ${DOTFILES}noctalia	${CONFIG}noctalia
 
-ln -sf ${DOTFILES}noctalia   			     ${CONFIG}noctalia
+ln -sf ${DOTFILES}fontconfig	${CONFIG}fontconfig
 
-ln -sf ${DOTFILES}fontconfig 			     ${CONFIG}fontconfig
-
-ln -sf ${DOTFILES}lazygit    			     ${CONFIG}lazygit
+ln -sf ${DOTFILES}lazygit	${CONFIG}lazygit
 
 
 ln -sf ~/josv-linux/dotfiles/zsh/zprofile ~/.zprofile
