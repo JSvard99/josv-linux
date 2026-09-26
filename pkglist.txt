@@ -24,3 +24,4 @@ ripgrep
 fzf
 noctalia
 os-prober
+libxcursor
