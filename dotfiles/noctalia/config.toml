@@ -1,5 +1,4 @@
 [shell]
-launch_apps_as_systemd_services = true
 font_family = "JetBrainsMono Nerd Font"
 setup_wizard_enabled = false
 polkit_agent = true
