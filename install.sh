@@ -20,6 +20,9 @@ yes "" | yay -S umbriel-git
 # Install catppuccin cursor
 yes "" | yay -S catppuccin-cursors-mocha
 
+# Install GTK theme
+yes "" | yay -S adw-gtk-theme
+
 # Create symlinks
 DOTFILES="${HOME}/josv-linux/dotfiles/"
 CONFIG="${HOME}/.config/"
