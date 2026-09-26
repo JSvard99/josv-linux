@@ -1,0 +1,107 @@
+[general]
+autostart = ["noctalia"]
+focus_on_activate = true
+
+[appearance]
+border_width = 1
+
+[keybinds]
+"Mod+T" = "spawn:ghostty"
+"Mod+B" = "spawn:firefox"
+"Mod+E" = "spawn:ghostty -e yazi"
+"Mod+Backspace" = "window-close"
+"Mod+Left" = "window-focus-left"
+"Mod+Right" = "window-focus-right"
+"Mod+Up" = "window-focus-up"
+"Mod+Down" = "window-focus-down"
+"Mod+Return" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+F" = "window-toggle-fullscreen"
+"Mod+Ctrl+S" = "window-cycle-height"
+"Mod+S" = "window-cycle-width"
+"Mod+Shift+Ctrl+S" = "window-cycle-height-back"
+"Mod+Shift+S" = "window-cycle-width-back"
+
+# Volume
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"Mod+XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
+# Media playback (playerctl)
+"XF86AudioPlay" = "spawn:playerctl play-pause"
+"XF86AudioNext" = "spawn:playerctl next"
+"XF86AudioPrev" = "spawn:playerctl previous"
+
+# Brightness
+"XF86MonBrightnessUp" = "spawn:brightnessctl set +5%"
+"XF86MonBrightnessDown" = "spawn:brightnessctl set 5%-"
+
+# Workspaces
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+"Mod+Shift+1" = "window-move-to-workspace:1"
+"Mod+Shift+2" = "window-move-to-workspace:2"
+"Mod+Shift+3" = "window-move-to-workspace:3"
+"Mod+Shift+4" = "window-move-to-workspace:4"
+"Mod+Shift+5" = "window-move-to-workspace:5"
+"Mod+Shift+6" = "window-move-to-workspace:6"
+"Mod+Shift+7" = "window-move-to-workspace:7"
+"Mod+Shift+8" = "window-move-to-workspace:8"
+"Mod+Shift+9" = "window-move-to-workspace:9"
+
+"Mod" = { action = "overview-toggle", repeat = false }
+
+# Window state and layout
+"Mod+L" = "window-toggle-floating"
+"Mod+Shift+T" = "window-focus-switch-floating"
+
+"Mod+C" = "column-center"
+"Mod+MouseMiddle" = "column-center"
+
+"Mod+Shift+Left" = "window-consume-or-expel-left"
+"Mod+Shift+Down" = "window-move-down"
+"Mod+Shift+Up" = "window-move-up"
+"Mod+Shift+Right" = "window-consume-or-expel-right"
+"Mod+Shift+Ctrl+Left" = "column-move-left" 
+"Mod+Shift+Ctrl+Right" = "column-move-right" 
+"Mod+WheelDown" = "window-focus-right"
+"Mod+WheelUp" = "window-focus-left"
+
+[input.keyboard]
+layout = "se"
+
+[input.cursor]
+theme = "catppuccin-mocha-dark-cursors"
+hide_when_typing = true
+
+[environment]
+
+
+[layout]
+mode = "scrolling"
+gap = 12
+width_presets = [0.1, 0.2, 0.333, 0.5, 0.667, 0.8, 1]
+
+[layout.struts]
+top = 150
+bottom = 50
+left = 50
+right = 50
+
+[layout.scrolling]
+
+[include]
+files = ["noctalia.toml"]
+
+[output."LG Electronics LG ULTRAFINE 605NTPCGT608"]
+mode = "2160x1440"
+
+[[window_rule]]
+match.is_focused = false
+opacity = 0.95
