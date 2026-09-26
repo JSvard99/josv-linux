@@ -14,6 +14,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 yes "" | makepkg -si
 
+# Install Umbriel
+yes "" | yay -S umbriel-git
 
 # Install catppuccin cursor
 yes "" | yay -S catppuccin-cursors-mocha
