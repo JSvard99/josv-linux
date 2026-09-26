@@ -1,7 +1,6 @@
 base-devel
 firefox
 ghostty
-hyprland
 lazygit
 man-db
 neovim
@@ -11,9 +10,7 @@ qt5-wayland
 qt6-wayland
 reflector
 ttf-jetbrains-mono-nerd
-uwsm
 wl-clipboard
-xdg-desktop-portal-hyprland
 yazi
 zsh
 keyd
