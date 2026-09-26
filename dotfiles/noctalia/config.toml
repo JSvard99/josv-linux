@@ -25,7 +25,7 @@ action = "reboot"
 shortcut = ""
 
 [[shell.session.actions]]
-action = "lock"
+action = "lock_and_suspend"
 shortcut = ""
 
 [idle]
@@ -54,7 +54,6 @@ builtin_ids = ["gtk3", "gtk4", "qt"]
 path = "/home/josv/josv-linux/wallpaper.png"
 
 [bar.default]
-smart_auto_hide = true
 reserve_space = false
 start = ["session", "spacer", "notifications", "spacer", "clock-date", "spacer", "clock"]
 center = ["workspaces"]
